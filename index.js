@@ -6,7 +6,6 @@ sequelize
   .sync({
     logging: false,
     force: true,
-    alter: true,
   })
   .then(() => {
     console.log('Database connected')
