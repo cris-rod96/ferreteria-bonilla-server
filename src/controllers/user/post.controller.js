@@ -23,9 +23,13 @@ const registerUser = async (req = request, res = response) => {
 const registerUserWithGoogle = async (req = request, res = response) => {
   try {
     const data = req.body
-    const { code, message } = await userService.registerUserWithGoogle(data)
+    const { code, message } = await userService.registerUserWithGoogle({
+      ...data,
+      isVerified: true,
+    })
     res.status(code).json({ message })
   } catch (error) {
+    console.log(error)
     res.status(500).json({
       messagee: 'Error interno. Intente de nuevo más tarde.',
     })

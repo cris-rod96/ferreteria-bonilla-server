@@ -34,7 +34,6 @@ const UserModel = (sequelize) => {
       },
       password: {
         type: DataTypes.STRING,
-        allowNull: false,
         validate: {
           len: {
             args: [6, 50],
