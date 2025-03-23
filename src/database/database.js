@@ -9,6 +9,6 @@ const sequelize = new Sequelize(LOCAL_DATABASE_URI, {
 
 models.forEach((model) => model(sequelize))
 
-const { User } = sequelize.models
+const { User, Position } = sequelize.models
 
-export { sequelize, User }
+export { sequelize, Position, User }
