@@ -18,5 +18,5 @@ sequelize
     loadData()
   })
   .catch((err) => {
-    console.log(err.message)
+    console.log(err)
   })

@@ -49,6 +49,11 @@ const UserModel = (sequelize) => {
         },
       },
 
+      gender: {
+        type: DataTypes.ENUM,
+        values: ['Femenino', 'Masculino', 'Otro'],
+      },
+
       role: {
         type: DataTypes.ENUM,
         values: ['Administrador', 'Gerente', 'Empleado', 'Candidato'],
@@ -62,6 +67,10 @@ const UserModel = (sequelize) => {
 
       sub: {
         type: DataTypes.STRING,
+      },
+
+      address: {
+        type: DataTypes.TEXT,
       },
     },
     {
