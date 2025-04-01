@@ -56,7 +56,13 @@ const UserModel = (sequelize) => {
 
       role: {
         type: DataTypes.ENUM,
-        values: ['Administrador', 'Gerente', 'Empleado', 'Candidato'],
+        values: [
+          'Administrador',
+          'Gerente',
+          'Empleado',
+          'Reclutador',
+          'Candidato',
+        ],
         defaultValue: 'Candidato',
       },
 
